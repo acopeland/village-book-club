@@ -143,7 +143,7 @@ function walk(dir, done) {
                     file.title = fileInfo.title;
                     file.author = fileInfo.author;
                     file.versions.push({
-                        url: 'http://grym.wotw.net' + dir + '/' + encodeURIComponent(file.name),
+                        url: process.env.APP_DOWNLOAD_URL + dir + '/' + encodeURIComponent(file.name),
                         size: file.size,
                         format: fileInfo.format
                     });
