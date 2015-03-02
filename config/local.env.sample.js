@@ -8,5 +8,6 @@ module.exports = {
     FTP_HOST: 'ftp.ftp.com',
     FTP_USER: 'user',
     FTP_PASSWORD: 'pass',
-    FTP_START_DIR: '/books'    
+    FTP_START_DIR: '/books',
+    APP_DOWNLOAD_URL: '/'
 };
