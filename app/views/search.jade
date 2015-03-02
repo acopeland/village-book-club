@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    div(class="col-md-12")
+        h1= title
+        include ./search.form.jade
+    div(class="col-md-12")
+        .h3 #{itemCount} results. Page #{page} of #{pageCount} 
+    div(class="col-md-12")
+        ul.list-group 
+            each book in books
+                li.list-group-item 
+                    <strong>#{book.title}</a></strong> by #{book.author}
+                    span.pull-right
+                        each version in book.versions
+                            a(href=version.url, class="format-link") [#{version.format}]
+                            
+        if paginate.hasPreviousPages || paginate.hasNextPages(pageCount)
+          .navigation.well-sm#pagination
+            ul.pager
+              if paginate.hasPreviousPages
+                li.previous
+                  a(href=paginate.href(true)).prev
+                    i.fa.fa-arrow-circle-left
+                    |  Previous
+              if paginate.hasNextPages(pageCount)
+                li.next
+                  a(href=paginate.href()).next
+                    | Next&nbsp;
+                    i.fa.fa-arrow-circle-right
+
+
+ 

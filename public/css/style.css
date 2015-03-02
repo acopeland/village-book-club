@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.submit-button {
+    display: block; width: 100%;
+}
+
+.format-link {
+    padding-left: 10px;
+}

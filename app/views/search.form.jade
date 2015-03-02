@@ -1,0 +1,8 @@
+form(class="form", name="search", action="/search", method="get")
+    div(class="form-group")
+        input(class="form-control search-input", type="text", name="searchtext", value="#{searchText}", placeholder="Search text")
+    div(class="form-group")       
+        select(class="form-control", name="type")
+            option(value="title", selected= (searchType==='title')) Search By Title
+            option(value="author", selected= (searchType==='author')) Search By Author
+    input(class="btn btn-default submit-button", type="submit" value="Search")
