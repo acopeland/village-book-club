@@ -1,12 +1,12 @@
 extends layout
 
 block content
-    div(class="col-md-12")
+    div
         h1= title
         include ./search.form.jade
-    div(class="col-md-12")
+    div
         .h3 #{itemCount} results. Page #{page} of #{pageCount} 
-    div(class="col-md-12")
+    div
         ul.list-group 
             each book in books
                 li.list-group-item 
